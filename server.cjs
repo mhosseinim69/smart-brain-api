@@ -11,7 +11,7 @@ const image = require('./controllers/image.cjs');
 const db = knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
+      host : "https://smart-brain-api-rvlc.onrender.com",
       port : 5432,
       user : 'postgres',
       password : 'smh1369',

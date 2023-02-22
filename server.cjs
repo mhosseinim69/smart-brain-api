@@ -24,12 +24,12 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('https://smart-brain-api-rvlc.onrender.com/', (req, res) => { res.send('success') })
-app.post('https://smart-brain-api-rvlc.onrender.com/signin', signin.handleSignin(db, bcrypt))
-app.post('https://smart-brain-api-rvlc.onrender.com/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
-app.get('https://smart-brain-api-rvlc.onrender.com/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db) })
-app.put('https://smart-brain-api-rvlc.onrender.com/image', (req, res) => { image.handleImage(req, res, db) })
-app.post('https://smart-brain-api-rvlc.onrender.com/imageurl', (req, res) => { image.handleApiCall(req, res) })
+app.get('/', (req, res) => { res.send('success') })
+app.post('/signin', signin.handleSignin(db, bcrypt))
+app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
+app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db) })
+app.put('/image', (req, res) => { image.handleImage(req, res, db) })
+app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) })
 
 app.listen(process.env.PORT, ()=> {
     console.log(`Server Started on Port ${process.env.Port}`)

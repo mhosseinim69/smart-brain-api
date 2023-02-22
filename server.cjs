@@ -24,7 +24,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', (req, res) => { res.send('success') })
+app.get('https://smart-brain-api-rvlc.onrender.com/', (req, res) => { res.send('success') })
 app.post('https://smart-brain-api-rvlc.onrender.com/signin', signin.handleSignin(db, bcrypt))
 app.post('https://smart-brain-api-rvlc.onrender.com/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
 app.get('https://smart-brain-api-rvlc.onrender.com/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db) })

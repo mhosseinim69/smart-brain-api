@@ -11,11 +11,11 @@ const image = require('./controllers/image.cjs');
 const db = knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
+      host : 'dpg-cg9gh99mbg54mbeu520g-a',
       port : 5432,
-      user : 'postgres',
-      password : 'smh1369',
-      database : 'smart-brain'
+      user : 'mostafa',
+      password : 'Zl9VqgO2xLrVdasAPpGOcX8FITq1xhAz',
+      database : 'smartbrain_9ua8'
     }
   });
 

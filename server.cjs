@@ -9,7 +9,7 @@ const profile = require('./controllers/profile.cjs');
 const image = require('./controllers/image.cjs');
 
 const db = knex({
-    client: 'mysql',
+    client: 'pg',
     connection: {
       host : 'dpg-cg9gh99mbg54mbeu520g-a',
       port : 5432,

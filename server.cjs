@@ -15,15 +15,15 @@ const image = require('./controllers/image.cjs');
 // });
 
 const db = knex({
-    client: 'pg',
-    connection: {
-      host : 'dpg-cg9gh99mbg54mbeu520g-a',
-      port : 5432,
-      user : 'mostafa',
-      password : 'Zl9VqgO2xLrVdasAPpGOcX8FITq1xhAz',
-      database : 'smartbrain_9ua8'
-    }
-  });
+  client: 'pg',
+  connection: {
+    host : 'dpg-cg9gh99mbg54mbeu520g-a.oregon-postgres.render.com',
+    port : 5432,
+    user : 'mostafa',
+    password : 'Zl9VqgO2xLrVdasAPpGOcX8FITq1xhAz',
+    database : 'smartbrain_9ua8'
+  }
+});
 
 const app = express();
 

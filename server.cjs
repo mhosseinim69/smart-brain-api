@@ -19,6 +19,14 @@ const db = knex({
   connection: 'postgres://mostafa:Zl9VqgO2xLrVdasAPpGOcX8FITq1xhAz@dpg-cg9gh99mbg54mbeu520g-a/smartbrain_9ua8'
 });
 
+db.raw("SELECT 1").then(() => {
+  console.log("PostgreSQL connected");
+})
+.catch((e) => {
+  console.log("PostgreSQL not connected");
+  console.error(e);
+});
+
 const app = express();
 
 app.use(bodyParser.json());

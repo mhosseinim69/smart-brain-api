@@ -8,11 +8,6 @@ const signin = require('./controllers/signin.cjs');
 const profile = require('./controllers/profile.cjs');
 const image = require('./controllers/image.cjs');
 
-// const db = require('knex')({
-//   client: 'pg',
-//   connection: process.env.PG_CONNECTION_STRING,
-//   searchPath: ['knex', 'public'],
-// });
 
 const db = knex({
   client: 'pg',
